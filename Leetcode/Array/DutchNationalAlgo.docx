@@ -1,0 +1,16 @@
+
+Challenge : https://leetcode.com/problems/sort-colors/submissions/1541028455/
+Problem Statement : Dutch National Flag Algo / Sort Colors/ Sort 3 distincts numbers in an array.
+  This algo helps sort (in-place withoiut extra space) the array with only 3 type of elements [0,1,0,1,2,0,1,2,2] (only 0s, 1s and 2s) by making its groups.
+  
+  -consider left = 0th index, right= last index(nums.length-1) and middle = 0th index . Now Iterate over middle till (mid <=right).It has majorly 3 rules :
+
+if array[mid] = 0 => SWAP array[mid] and array[left] , INCREMENT middle (mid+=1) and SHIFT RIGHT the left (left+=1)
+if array[mid] = 1 => INCREMENT middle (mid+=1) [Because we want 1s in centre so we wont react on it and just move the iterator next]
+if array[mid] = 2 => SWAP array[mid] and array[right] , SHIFT LEFT the right (right-=1). Note: INCREMENT Middle will NOT HAPPEN here because between the swap we still can have unsorted elements between mid and right.
+
+
+Time Complexity: O(N), where N = size of the given array.
+Reason: We are using a single loop that can run at most N times.
+
+Space Complexity: O(1) as we are not using any extra space.
