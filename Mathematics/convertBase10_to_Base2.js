@@ -17,3 +17,6 @@ console.log(res)
 
 //Built-in method to verify
 console.log("Output is correct ? ", n.toString(2)==res)
+
+
+// NOTE: This can be solved better with Bit Manipulation. Better learn that dude!
