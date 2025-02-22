@@ -13,5 +13,10 @@ var groupAnagrams = function(strs) {
     return Object.values(dict)
 };
 
-TimeComplexisty : N * MlogM
+
+i.split("") takes O(k) time, where k is the length of the string.
+i.sort() has a time complexity of O(k log k) because sorting an array takes this time in the worst case.
+i.join("") takes O(k) time to concatenate the array back into a string.
+
+TimeComplexisty : N * KlogK
 SpaceComplexity : O(N)
