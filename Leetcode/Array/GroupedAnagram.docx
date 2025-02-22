@@ -1,0 +1,17 @@
+
+Problem Link : https://leetcode.com/problems/group-anagrams/submissions/1552085335/
+Statement : 
+
+var groupAnagrams = function(strs) {
+    const dict = {}
+    for(let i of strs){
+        console.log(i)
+        const tempStr = i.split("").sort().join("")
+        if(dict[tempStr]) dict[tempStr].push(i)
+        else dict[tempStr]=[i]
+    }
+    return Object.values(dict)
+};
+
+TimeComplexisty : N * MlogM
+SpaceComplexity : O(N)
