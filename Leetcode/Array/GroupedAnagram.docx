@@ -1,0 +1,22 @@
+
+Problem Link : https://leetcode.com/problems/group-anagrams/submissions/1552085335/
+Statement : 
+
+var groupAnagrams = function(strs) {
+    const dict = {}
+    for(let i of strs){
+        console.log(i)
+        const tempStr = i.split("").sort().join("")
+        if(dict[tempStr]) dict[tempStr].push(i)
+        else dict[tempStr]=[i]
+    }
+    return Object.values(dict)
+};
+
+
+i.split("") takes O(k) time, where k is the length of the string.
+i.sort() has a time complexity of O(k log k) because sorting an array takes this time in the worst case.
+i.join("") takes O(k) time to concatenate the array back into a string.
+
+TimeComplexisty : N * KlogK
+SpaceComplexity : O(N)
